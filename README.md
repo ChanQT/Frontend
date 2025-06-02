@@ -1,50 +1,62 @@
-# React + TypeScript + Vite
+# BHMS
+# 🏠 Boarding House Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Boarding House Management System designed to simplify operations for landlords . Built with **TypeScript** on the frontend and **Laravel 10 (PHP)** on the backend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### 🧑‍💼 Admin/Owner Features
+- Dashboard Overview: Quick stats on occupancy, payments
+- Room Management: Create and manage rooms with pricing and availability.
+- Tenant Management: Add, edit, or remove tenants and assign rooms.
+- Payment Tracking: Manage payments, Payment history.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### 🛠️ System Features
+- TypeScript Frontend: Maintainable and scalable front-end code.
+- Laravel 10 Backend: RESTful API with robust security and validation.
+- Activity Logging: Track user actions and system changes.
+- Offline Capability:	Designed to function exclusively on desktop without requiring an internet connection, making it suitable for standalone use.
 
-- Configure the top-level `parserOptions` property like this:
+## 📦 Tech Stack
+- **Frontend**: TypeScript, React
+- **Backend**: Laravel 10 (PHP)
+- **Database**: MySQL
+- **Authentication**: Laravel Sanctum
+- **API**: RESTful APIs built with Laravel
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## ⚙️ Installation
+donwnoad Node.js ≥v18 (https://nodejs.org/en)
+prompt in cmd" npm createvite@latest
+Create Project Name “fronted-app”
+Select “React” for Framework
+Select a Variant “TypeScript + SWC”
+SWC (stands for Speedy Web Compiler)
+npm install
+composer install(for back end)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+**Frontend (TypeScript)**
+https://github.com/ChanQT/Frontend
+cd Frontend
+npm run dev
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+**database**
+Download Xampp for Mysql
+
+### Backend (Laravel)
+[BHMS GitHub Repository](https://github.com/ChanQT/BHMS)
+cd backend
+cp .env.bhms .env
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
+   
+ **Testing**
+php artisan serve(backend folder)
+npm run dev (Frontend folder)
+
+
+
+
