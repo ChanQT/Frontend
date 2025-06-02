@@ -1,0 +1,171 @@
+.login-page {
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+    .logo {
+        width: 200px;
+        height: auto;
+        display: block;
+        margin: 0 auto 20px auto;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100%;
+        padding: 0 10px;
+        background: #ffffff;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #e6e8eb, #e3e7e9);
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        color: #000000;
+        font-weight: 900;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .form-wrapper {
+        width: 400px;
+        border-radius: 15px;
+        padding: 40px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+        transition: all 0.3s ease;
+        margin: 0 auto;
+    }
+
+    .input-field {
+        position: relative;
+        margin: 20px 0;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .input-field input {
+        width: 100%;
+        height: 40px;
+        background: transparent;
+        border: 2px solid #000000;
+        border-radius: 5px;
+        outline: none;
+        font-size: 16px;
+        color: #000000;
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .input-field input:focus {
+        border-color: #007bff;
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .input-field input::placeholder {
+        color: transparent;
+        transition: color 0.3s ease;
+    }
+
+    .input-field input:focus::placeholder,
+    .input-field input:hover::placeholder {
+        color: #000000;
+    }
+
+    .input-field label {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        font-size: 16px;
+        color: #000000ce;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .input-field input:focus + label,
+    .input-field input:not(:placeholder-shown) + label {
+        top: -10px;
+        left: 10px;
+        font-size: 12px;
+        color: #000000;
+    }
+
+    .forget {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 25px 0 35px 0;
+        color: #075a1c;
+    }
+
+    #remember {
+        accent-color: #ffdde1;
+    }
+
+    .forget label {
+        display: flex;
+        align-items: center;
+    }
+
+    .forget label p {
+        margin-left: 8px;
+    }
+
+    .wrapper a {
+        color: #ffdde1;
+        text-decoration: none;
+    }
+
+    .wrapper a:hover {
+        text-decoration: underline;
+    }
+
+    button {
+        background-color: #271930;
+        color: #ffffff;
+        font-weight: 600;
+        border: none;
+        padding: 15px 20px;
+        cursor: pointer;
+        border-radius: 25px;
+        font-size: 16px;
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        margin-top: 20px;
+    }
+
+    button:hover {
+        color: #000000;
+        background: rgb(255, 255, 255);
+        border-color: #000000;
+    }
+
+    .error-message {
+        color: #ff0000;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
